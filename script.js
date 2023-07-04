@@ -2,6 +2,29 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
+
+// program to get a random item from an array
+
+// function getRandomItem (arr) {
+
+//   // get random index value
+//   const randomIndex = Math.floor(Math.random() * arr.length);
+//   // get random
+//   const item = arr[randomIndex];
+
+//   return item;
+// }
+
+// const arrayNumeric = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// const arrayAlpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// const arraySpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '~', '`'];
+
+
+
+
+// const result = getRandomItem(arrayNumeric + arrayAlpha + arraySpecial);
+// console.log(result);
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -21,6 +44,20 @@ function writePassword() {
     let passwordLowercase = confirm("Should your password have lowercase letters?");
     let passwordNumeric = confirm("Should your password have numbers in it?");
     let passwordSpecial = confirm("Should your password have special characters in it?");
+
+    let passLength = passwordInteger;
+     
+    
+    
+    for (let i = 0; i < passwordInteger; i++){
+
+    }
+    
+    
+    // console.log(passwordInteger);
+    // console.log(passwordUppercase);
+    // console.log(passwordLowercase);
+    // console.log(passwordSpecial);
 }
   
 }
