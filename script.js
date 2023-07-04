@@ -44,9 +44,110 @@ function writePassword() {
     let passwordLowercase = confirm("Should your password have lowercase letters?");
     let passwordNumeric = confirm("Should your password have numbers in it?");
     let passwordSpecial = confirm("Should your password have special characters in it?");
-
     let passLength = passwordInteger;
-     
+
+    if (passwordUppercase === true) {
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordLowercase === true) {
+      charset = "abcdefghijklmnopqrstuvwxyz"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordNumeric === true) {
+      charset = "0123456789"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordSpecial === true) {
+      charset = "~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordLowercase === true){
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordLowercase === true &&  passwordNumeric === true){
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordLowercase === true && passwordNumeric === true && passwordSpecial === true) {
+      charset = "BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordNumeric === true){
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordNumeric === true && passwordSpecial === true){
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordUppercase === true && passwordSpecial === true){
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordLowercase === true && passwordNumeric === true){
+      charset = "abcdefghijklmnopqrstuvwxyz0123456789"
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordLowercase === true && passwordNumeric === true && passwordSpecial === true){
+      charset = "abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordLowercase === true && passwordSpecial === true){
+      charset = "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } else if (passwordNumeric === true && passwordSpecial === true){
+      charset = "0123456789~!@#$%^&*()_+-="
+      passwordText = "";
+      for (i = 0; i < passwordInteger; i++) {
+        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passwordText);
+      }
+    } 
+    
+    
+    
     
     
     for (let i = 0; i < passwordInteger; i++){
@@ -71,6 +172,23 @@ the following prompts should ask the user:
 - how long the password is (between 8 and 128 characters) [input prompt]
 - whether it includes uppercase, lowercase, numeric, and/or special characters [boolean] []
 - generate password based on above metrics
+
+Possible combinations:
+Just uppercase letters ----
+Just lowercase letters ----
+Just numbers ----
+Just special characters ---- 
+--
+uppercase + lowercase ----
+uppercase + lowercase + numbers ----
+uppercase + lowercase + numbers + special characters ----
+uppercase + numbers ----
+uppercase + numbers + special characters ----
+uppercase + special characters ----
+lowercase + numbers ----
+lowercase + numbers + special characters ----
+lowercase + special characters ----
+numbers + special characters
 */
 
 
