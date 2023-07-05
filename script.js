@@ -28,7 +28,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
   passwordText.value = password;
 
   function generatePassword(){
@@ -44,44 +43,44 @@ function writePassword() {
     let passwordLowercase = confirm("Should your password have lowercase letters?");
     let passwordNumeric = confirm("Should your password have numbers in it?");
     let passwordSpecial = confirm("Should your password have special characters in it?");
-    let passLength = passwordInteger;
 
-    if (passwordUppercase === true) {
+    if (passwordUppercase === true && passwordLowercase === false && passwordNumeric === false && passwordSpecial === false) {
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      passwordText = "";
+      passWrite = "";
       for (i = 0; i < passwordInteger; i++) {
-        passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
-        console.log(passwordText);
+        passWrite += charset.charAt(Math.floor(Math.random() * (charset.length)));
+        console.log(passWrite);
+        password = passWrite;
       }
-    } else if (passwordLowercase === true) {
+    } else if (passwordLowercase === true && passwordNumeric === false && passwordSpecial === false && passwordUppercase === false) {
       charset = "abcdefghijklmnopqrstuvwxyz"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordNumeric === true) {
+    } else if (passwordLowercase === false && passwordNumeric === true && passwordSpecial === false && passwordUppercase === false) {
       charset = "0123456789"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordSpecial === true) {
+    } else if (passwordLowercase === false && passwordNumeric === false && passwordSpecial === true && passwordUppercase === false) {
       charset = "~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordUppercase === true && passwordLowercase === true){
+    } else if (passwordUppercase === true && passwordLowercase === true && passwordNumeric === false && passwordSpecial === false){
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordUppercase === true && passwordLowercase === true &&  passwordNumeric === true){
+    } else if (passwordUppercase === true && passwordLowercase === true && passwordNumeric === true && passwordSpecial === false){
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
@@ -95,49 +94,49 @@ function writePassword() {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordUppercase === true && passwordNumeric === true){
+    } else if (passwordUppercase === true && passwordNumeric === true && passwordLowercase === false && passwordSpecial === false){
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordUppercase === true && passwordNumeric === true && passwordSpecial === true){
+    } else if (passwordUppercase === true && passwordNumeric === true && passwordSpecial === true && passwordLowercase === false){
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordUppercase === true && passwordSpecial === true){
+    } else if (passwordUppercase === true && passwordSpecial === true && passwordNumeric === false && passwordLowercase === false){
       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordLowercase === true && passwordNumeric === true){
+    } else if (passwordLowercase === true && passwordNumeric === true && passwordSpecial === false && passwordUppercase === false){
       charset = "abcdefghijklmnopqrstuvwxyz0123456789"
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordLowercase === true && passwordNumeric === true && passwordSpecial === true){
+    } else if (passwordLowercase === true && passwordNumeric === true && passwordSpecial === true && passwordUppercase === false){
       charset = "abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordLowercase === true && passwordSpecial === true){
+    } else if (passwordLowercase === true && passwordSpecial === true && passwordUppercase === false && passwordNumeric === false){
       charset = "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
         passwordText += charset.charAt(Math.floor(Math.random() * (charset.length)));
         console.log(passwordText);
       }
-    } else if (passwordNumeric === true && passwordSpecial === true){
+    } else if (passwordNumeric === true && passwordSpecial === true && passwordUppercase === false && passwordLowercase === false){
       charset = "0123456789~!@#$%^&*()_+-="
       passwordText = "";
       for (i = 0; i < passwordInteger; i++) {
@@ -145,20 +144,6 @@ function writePassword() {
         console.log(passwordText);
       }
     } 
-    
-    
-    
-    
-    
-    for (let i = 0; i < passwordInteger; i++){
-
-    }
-    
-    
-    // console.log(passwordInteger);
-    // console.log(passwordUppercase);
-    // console.log(passwordLowercase);
-    // console.log(passwordSpecial);
 }
   
 }
