@@ -8,7 +8,7 @@ if their password will have upper or lowercase characters, numbers, and/or speci
 As this is a web application, no installation is necessary.
 
 ## Usage
-Navigate to the site page [here]() and click "generate password". The site will prompt you with several options as to what characters you would like your password to contain, as well as the password length. After all prompts have been answered correctly, your newly generated password will appear in the text box, located center of the screen. 
+Navigate to the site page [here]() and click "generate password". The site will prompt you with several options as to what characters you would like your password to contain, as well as the password length. After all prompts have been answered, your newly generated password will appear in the text box, located center of the screen. 
 
 ## Credits
 - [A way to ensure a prompt only accepts numeric data.](https://stackoverflow.com/questions/46552085/javascript-force-specific-data-type-input-or-accept-only-digits-in-input) by Umang Galaiya on Stack Overflow.
